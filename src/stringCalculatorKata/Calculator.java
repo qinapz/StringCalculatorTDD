@@ -7,11 +7,19 @@ public class Calculator {
         if (isEmpty(input)) {
             return 0;
         }
-        if (input.length() == 1) {
+        if (isSingleNumber(input)) {
             return stringToInt(input);
         } else {
-            return Integer.parseInt(numbers[0]) + Integer.parseInt(numbers[1]);
+            return sumOfTwoNumbers(numbers);
         }
+    }
+
+    private int sumOfTwoNumbers(String[] numbers) {
+        return stringToInt(numbers[0]) + stringToInt(numbers[1]);
+    }
+
+    private boolean isSingleNumber(String input) {
+        return input.length() == 1;
     }
 
     private boolean isEmpty(String input) {
