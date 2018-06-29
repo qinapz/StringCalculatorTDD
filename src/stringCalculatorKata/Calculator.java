@@ -29,6 +29,9 @@ public class Calculator {
 
     private int getSum(String[] numbers, int sum) {
         for (String number : numbers) {
+            if (stringToInt(number) > 1000) {
+                continue;
+            }
             sum += Integer.parseInt(number);
         }
         return sum;
