@@ -25,4 +25,9 @@ public class TestCalculate {
     public void aSingleNumberReturnsTheInsertedNumber() {
         assertEquals(calculator.calculate("1"), 1);
     }
+
+    @Test
+    public void twoNumbersReturnsTheSum() {
+        assertEquals(calculator.calculate("1,2"), 3);
+    }
 }
