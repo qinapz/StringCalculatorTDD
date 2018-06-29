@@ -6,6 +6,10 @@ public class Calculator {
 
     public int calculate(String input) {
         String[] numbers = input.split(separator);
+        return checkInput(input, numbers);
+    }
+
+    private int checkInput(String input, String[] numbers) {
         if (isEmpty(input)) {
             return 0;
         }
@@ -17,16 +21,25 @@ public class Calculator {
     }
 
     private int sumOfTheNumbers(String[] numbers) {
+        isNegative(numbers);
+        int sum = 0;
+        sum = getSum(numbers, sum);
+        return sum;
+    }
+
+    private int getSum(String[] numbers, int sum) {
+        for (String number : numbers) {
+            sum += Integer.parseInt(number);
+        }
+        return sum;
+    }
+
+    private void isNegative(String[] numbers) {
         for (String current : numbers) {
             if (stringToInt(current) < 0) {
                 throw new IllegalArgumentException("NEGATIVE INPUT");
             }
         }
-        int sum = 0;
-        for (String number : numbers) {
-            sum += Integer.parseInt(number);
-        }
-        return sum;
     }
 
     private boolean isSingleNumber(String input) {
