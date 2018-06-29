@@ -12,12 +12,16 @@ public class Calculator {
         if (isSingleNumber(input)) {
             return stringToInt(input);
         } else {
-            return sumOfTwoNumbers(numbers);
+            return sumOfTheNumbers(numbers);
         }
     }
 
-    private int sumOfTwoNumbers(String[] numbers) {
-        return stringToInt(numbers[0]) + stringToInt(numbers[1]);
+    private int sumOfTheNumbers(String[] numbers) {
+        int sum = 0;
+        for (int i = 0; i < numbers.length; i++) {
+            sum += Integer.parseInt(numbers[i]);
+        }
+        return sum;
     }
 
     private boolean isSingleNumber(String input) {
