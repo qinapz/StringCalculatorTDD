@@ -17,6 +17,11 @@ public class Calculator {
     }
 
     private int sumOfTheNumbers(String[] numbers) {
+        for (String current : numbers) {
+            if (stringToInt(current) < 0) {
+                throw new IllegalArgumentException("NEGATIVE INPUT");
+            }
+        }
         int sum = 0;
         for (String number : numbers) {
             sum += Integer.parseInt(number);
