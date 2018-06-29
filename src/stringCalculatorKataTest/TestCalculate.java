@@ -41,4 +41,9 @@ public class TestCalculate {
         assertEquals(calculator.calculate("1\n2,4"), 7);
     }
 
+    @Test(expected = IllegalArgumentException.class)
+    public void negativeNumbersThrowAnException() {
+        calculator.calculate("-5");
+    }
+
 }
