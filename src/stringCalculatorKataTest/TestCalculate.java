@@ -20,4 +20,9 @@ public class TestCalculate {
     public void anEmptyStringReturnsZero() {
         assertEquals(calculator.calculate(""), 0);
     }
+
+    @Test
+    public void aSingleNumberReturnsTheInsertedNumber() {
+        assertEquals("1", 1);
+    }
 }
