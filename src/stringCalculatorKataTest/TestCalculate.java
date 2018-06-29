@@ -30,4 +30,10 @@ public class TestCalculate {
     public void twoNumbersReturnsTheSum() {
         assertEquals(calculator.calculate("1,2"), 3);
     }
+
+    @Test
+    public void twoNumbersSeparatedByNewLineReturnsTheSum() {
+        assertEquals(calculator.calculate("1\n2"), 3);
+    }
+
 }
