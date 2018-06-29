@@ -2,8 +2,10 @@ package stringCalculatorKata;
 
 public class Calculator {
 
+    private static final String separator = ",|\n";
+
     public int calculate(String input) {
-        String[] numbers = input.split(",|\n");
+        String[] numbers = input.split(separator);
         if (isEmpty(input)) {
             return 0;
         }
