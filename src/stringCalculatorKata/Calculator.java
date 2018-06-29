@@ -29,12 +29,16 @@ public class Calculator {
 
     private int getSum(String[] numbers, int sum) {
         for (String number : numbers) {
-            if (stringToInt(number) > 1000) {
+            if (numberIsTooBig(number)) {
                 continue;
             }
             sum += Integer.parseInt(number);
         }
         return sum;
+    }
+
+    private boolean numberIsTooBig(String number) {
+        return stringToInt(number) > 1000;
     }
 
     private void isNegative(String[] numbers) {
