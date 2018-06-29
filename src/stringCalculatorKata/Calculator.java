@@ -6,10 +6,10 @@ public class Calculator {
 
     public int calculate(String input) {
         String[] numbers = input.split(separator);
-        return checkInput(input, numbers);
+        return Sum(input, numbers);
     }
 
-    private int checkInput(String input, String[] numbers) {
+    private int Sum(String input, String[] numbers) {
         if (isEmpty(input)) {
             return 0;
         }

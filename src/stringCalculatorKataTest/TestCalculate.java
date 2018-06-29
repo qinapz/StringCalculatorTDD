@@ -46,4 +46,9 @@ public class TestCalculate {
         calculator.calculate("-5");
     }
 
+    @Test
+    public void numbersGreaterThanAThousandAreIgnored() {
+        assertEquals(calculator.calculate("10,10,1000"), 20);
+    }
+
 }
