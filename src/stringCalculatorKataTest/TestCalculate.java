@@ -13,7 +13,7 @@ public class TestCalculate {
 
     @Before
     public void init() {
-        Calculator calculator = new Calculator();
+        calculator = new Calculator();
     }
 
     @Test
@@ -23,6 +23,6 @@ public class TestCalculate {
 
     @Test
     public void aSingleNumberReturnsTheInsertedNumber() {
-        assertEquals("1", 1);
+        assertEquals(calculator.calculate("1"), 1);
     }
 }
