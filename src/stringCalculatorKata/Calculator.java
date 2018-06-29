@@ -18,8 +18,8 @@ public class Calculator {
 
     private int sumOfTheNumbers(String[] numbers) {
         int sum = 0;
-        for (int i = 0; i < numbers.length; i++) {
-            sum += Integer.parseInt(numbers[i]);
+        for (String number : numbers) {
+            sum += Integer.parseInt(number);
         }
         return sum;
     }
