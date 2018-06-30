@@ -35,4 +35,9 @@ public class TestCalculate {
     public void givenTwoNumbersSeparatedByNewLineCalculatorReturnsTheSum() {
         assertEquals(4, calculator.calculate("2\n2"));
     }
+
+    @Test
+    public void givenThreeNumbersSeparatedEitherWayCalculatorReturnsTheSum() {
+        assertEquals(4, calculator.calculate("2,1\n1"));
+    }
 }
