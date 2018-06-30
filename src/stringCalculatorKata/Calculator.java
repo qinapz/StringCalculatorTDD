@@ -20,12 +20,16 @@ public class Calculator {
         sum = 0;
         for (String number : numbers) {
             isNegative(number);
-            if (stringToInt(number) > 1000) {
+            if (isTooBig(number)) {
                 continue;
             }
             sum += stringToInt(number);
         }
         return sum;
+    }
+
+    private boolean isTooBig(String number) {
+        return stringToInt(number) > 1000;
     }
 
     private void isNegative(String number) {
