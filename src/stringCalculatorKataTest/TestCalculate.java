@@ -40,4 +40,9 @@ public class TestCalculate {
     public void givenThreeNumbersSeparatedEitherWayCalculatorReturnsTheSum() {
         assertEquals(4, calculator.calculate("2,1\n1"));
     }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void givenNegativeNumberCalculatorThrowsException() {
+        calculator.calculate("-1");
+    }
 }
