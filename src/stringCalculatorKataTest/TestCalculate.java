@@ -25,4 +25,9 @@ public class TestCalculate {
     public void givenOneNumberCalculatorReturnsThatNumber() {
         assertEquals(1, calculator.calculate("1"));
     }
+
+    @Test
+    public void givenTwoNumbersSeparatedByCommaCalculatorReturnsTheSum() {
+        assertEquals(4, calculator.calculate("2,2"));
+    }
 }
