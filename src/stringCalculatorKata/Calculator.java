@@ -20,6 +20,9 @@ public class Calculator {
         sum = 0;
         for (String number : numbers) {
             isNegative(number);
+            if (stringToInt(number) > 1000) {
+                continue;
+            }
             sum += stringToInt(number);
         }
         return sum;
