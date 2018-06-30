@@ -3,6 +3,7 @@ package stringCalculatorKata;
 public class Calculator {
 
     private static final String SEPARATOR = ",|\n";
+    private int sum;
 
     public int calculate(String input) {
         String[] numbers = input.split(SEPARATOR);
@@ -17,9 +18,9 @@ public class Calculator {
     }
 
     private int sum(String[] numbers) {
-        int sum = 0;
-        for (int i = 0; i < numbers.length; i++) {
-            sum += stringToInt(numbers[i]);
+        sum = 0;
+        for (String number : numbers) {
+            sum += stringToInt(number);
         }
         return sum;
     }
