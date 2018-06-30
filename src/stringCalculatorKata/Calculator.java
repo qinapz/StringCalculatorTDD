@@ -2,7 +2,7 @@ package stringCalculatorKata;
 
 public class Calculator {
 
-    private static final String SEPARATOR = ",";
+    private static final String SEPARATOR = ",|\n";
 
     public int calculate(String input) {
         String[] numbers = input.split(SEPARATOR);
