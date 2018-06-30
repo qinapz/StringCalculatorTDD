@@ -21,4 +21,8 @@ public class TestCalculate {
         assertEquals(0, calculator.calculate(""));
     }
 
+    @Test
+    public void givenOneNumberCalculatorReturnsThatNumber() {
+        assertEquals(1, calculator.calculate("1"));
+    }
 }
