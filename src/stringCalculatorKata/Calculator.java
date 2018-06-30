@@ -19,12 +19,16 @@ public class Calculator {
     private int sum(String[] numbers) {
         sum = 0;
         for (String number : numbers) {
-            if (stringToInt(number) < 0) {
-                throw new IllegalArgumentException();
-            }
+            isNegative(number);
             sum += stringToInt(number);
         }
         return sum;
+    }
+
+    private void isNegative(String number) {
+        if (stringToInt(number) < 0) {
+            throw new IllegalArgumentException();
+        }
     }
 
     private boolean isSingleNumber(String input) {
