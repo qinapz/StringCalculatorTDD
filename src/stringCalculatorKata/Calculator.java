@@ -9,8 +9,7 @@ public class Calculator {
         String[] numbers = input.split(SEPARATOR);
         if (isEmpty(input)) {
             return 0;
-        }
-        if (isSingleNumber(input)) {
+        } else if (isSingleNumber(input)) {
             return stringToInt(input);
         } else {
             return sum(numbers);
@@ -20,6 +19,9 @@ public class Calculator {
     private int sum(String[] numbers) {
         sum = 0;
         for (String number : numbers) {
+            if (stringToInt(number) < 0) {
+                throw new IllegalArgumentException();
+            }
             sum += stringToInt(number);
         }
         return sum;
